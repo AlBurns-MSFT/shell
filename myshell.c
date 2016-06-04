@@ -1,6 +1,4 @@
-//Alex Burns
-//September 29th, 2015
-//CIS 3207 Lab Project 2: creating a shell
+// shell project for a class
  
 #include <sys/types.h> //for dir
 #include <dirent.h> //for dir
