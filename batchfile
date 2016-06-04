@@ -1,0 +1,18 @@
+cd 
+environ
+clr
+dir /home
+echo this is an echo
+help > help_output
+ls -l
+ls -l > ls_out
+ls | head -3 > ls_head3
+sort numbers
+sort numbers > numbers_out
+sort numbers >> numbers_out &
+
+sort numbers
+brokencommand
+cd ..
+cd /fakedirectory
+quit
