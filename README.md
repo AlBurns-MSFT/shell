@@ -21,8 +21,8 @@ batchfile formatting: './myshell batchfile'
 		- supports I/O '>' and '>>' redirection
 - help	- displays contents of readme file using the more command
 		- supports I/O '>' and '>>' redirection
- - pause	- pauses program until 'Enter' is pressed
- - quit	- quits 'myshell'
+- pause	- pauses program until 'Enter' is pressed
+- - quit	- quits 'myshell'
 
 input syntax formatting examples: 
 - 'command arg1 arg2 < inputfile > outputfile &' 
