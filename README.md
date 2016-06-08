@@ -61,7 +61,7 @@ I/O REDIRECTION OPERATORS
 
 PROGRAM ENVIRONMENT
 
-The program environment represents many pieces of information that determine behavior and access to resources. Some of these settings are contained within configuration files and others are determined by user input. One way the shell keepds track of all these settings and details is through an area it maintains called the environment. The environment is an area that the shell builds each time it starts a user session that contains an array of environment strings that define system properties. Environment variables are variables that are defined for the current shell and are inherited by any child shells or processes. 
+The program environment represents many pieces of information that determine behavior and access to resources. Some of these settings are contained within configuration files and others are determined by user input. One way the shell keeps track of all these settings and details is through an area it maintains called the environment. The environment is an area that the shell builds each time it starts a user session that contains an array of environment strings that define system properties. Environment variables are variables that are defined for the current shell and are inherited by any child shells or processes. 
 
 BACKGROUND PROCESS EXECUTION
 
