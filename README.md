@@ -1,45 +1,46 @@
 # DESCRIPTION
 
-	'myshell' is a simple shell designed to parse input into commands, arguments, and optional input redirection, output redirection, and background processing. Once input is parsed, the input is either processed internally if its a builtin command, otherwise it is located and executed. This shell does not support many standard shell features, the only features it supports are the features listed in this document. 
+'myshell' is a simple shell designed to parse input into commands, arguments, and optional input redirection, output redirection, and background processing. Once input is parsed, the input is either processed internally if its a builtin command, otherwise it is located and executed. This shell does not support many standard shell features, the only features it supports are the features listed in this document. 
 
-BATCHFILE
+# BATCHFILE
 
-	To use a batchfile, create a file and have each line desired to be processed by 'myshell' entered on separate lines.
+To use a batchfile, create a file and have each line desired to be processed by 'myshell' entered on separate lines.
 
-	To run the batchfile, run the program and make the first argument the batchfile name.
+To run the batchfile, run the program and make the first argument the batchfile name.
 Batch processing will exit program once EOF is reached in the batchfile.
 
 batchfile formatting: './myshell batchfile'
 
-INTERNAL COMMANDS SUPPORTED: 
-	cd 	- changes directory
-	clr	- clears the screen
-	dir     - lists contents of directory, supports I/O '>' and '>>' redirection   
-	environ - lists environment, supports I/O '>' and '>>' redirection
-	echo	- echos the string entered to standard output
-		- supports I/O '>' and '>>' redirection
-	help	- displays contents of readme file using the more command
-		- supports I/O '>' and '>>' redirection
-	pause	- pauses program until 'Enter' is pressed
-	quit	- quits 'myshell'
+# INTERNAL COMMANDS SUPPORTED: 
 
--input syntax formatting examples: 
-	'command arg1 arg2 < inputfile > outputfile &' 
-	'command arg1 arg2 >> outputfile < inputfile &'
-        'command arg1 arg2 < inputfile | command arg1 arg2 > outputfile'
+- cd 	- changes directory
+- clr	- clears the screen
+- dir     - lists contents of directory, supports I/O '>' and '>>' redirection   
+- environ - lists environment, supports I/O '>' and '>>' redirection
+- echo	- echos the string entered to standard output
+		- supports I/O '>' and '>>' redirection
+- help	- displays contents of readme file using the more command
+		- supports I/O '>' and '>>' redirection
+ - pause	- pauses program until 'Enter' is pressed
+ - quit	- quits 'myshell'
 
--examples that demonstrate functionality:
-	'ls -l | sort'
-	'clr'
-	'man gcc > man_gcc'
-	'grep'
-	'sleep 10 &' 
-	'cd ..'
-	'dir /home > outputfile'
-	'dir / >> outputfile'
+input syntax formatting examples: 
+- 'command arg1 arg2 < inputfile > outputfile &' 
+- 'command arg1 arg2 >> outputfile < inputfile &'
+- 'command arg1 arg2 < inputfile | command arg1 arg2 > outputfile'
+
+examples that demonstrate functionality:
+- 'ls -l | sort'
+- 'clr'
+- 'man gcc > man_gcc'
+- 'grep'
+- 'sleep 10 &' 
+- 'cd ..'
+- 'dir /home > outputfile'
+- 'dir / >> outputfile'
 	
 	
-IMPORTANT WARNINGS:      
+# IMPORTANT WARNINGS:      
              
 * background symbol always appears at the end of the line  
 * all sections to be parsed are separated by whitespace
@@ -51,16 +52,12 @@ IMPORTANT WARNINGS:
 * shell does not support reporting when background process finishes
 
 I/O REDIRECTION OPERATORS
-	'>'  - redirects standard output to file, creating and truncating if necessary
-	'>>' - very similar to '>', except file is appended if necessary
-	'<'  - redirects standard input to come from file
-	'|'  - pipes are a set of processes chained by their standard streams 
-	       so that the output of the process to the left of the pipe (stdout)
-	       feeds directly as input (stdin) to process to the right of the pipe
-	'&'  - backgrounds a process, rendering the process unable to receive keyboard
-	       signals and unable to send output to the parent terminal. Essentially,
-	       the process set to the background acts as any other process, except it
-               can't be seen.
+	
+- '>'  - redirects standard output to file, creating and truncating if necessary
+- '>>' - very similar to '>', except file is appended if necessary
+- '<'  - redirects standard input to come from file
+- '|'  - pipes are a set of processes chained by their standard streams so that the output of the process to the left of the pipe (stdout) feeds directly as input (stdin) to process to the right of the pipe
+- '&'  - backgrounds a process, rendering the process unable to receive keyboard signals and unable to send output to the parent terminal. Essentially, the process set to the background acts as any other process, except it can't be seen.
 
 PROGRAM ENVIRONMENT
 
