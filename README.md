@@ -50,6 +50,8 @@ examples that demonstrate functionality:
 * only output redirection is supported to the right of the pipe
 * shell does not support bringing background process to foreground
 * shell does not support reporting when background process finishes
+* help was designed to call the readme, which has since been edited. may have formatting issues/other issues if this is tried without fixing, not sure.  
+
 
 I/O REDIRECTION OPERATORS
 	
