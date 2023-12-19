@@ -33,7 +33,7 @@ void runsource(int pfd[], char **args);
 void rundest(int pfd[], char **args2);
 int argsLength(char **args);
  
-//gloval variable for environ
+//global variable for environ
 extern char **environ;
  
 //List of I/O redirection commands
